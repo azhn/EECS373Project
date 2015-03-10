@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.azhen.bikingapp" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".HomeScreenActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BikeTrackerActivity"
+            android:label="@string/alternate_title_activity_bike_tracker"
+            android:parentActivityName=".HomeScreenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.azhen.bikingapp.HomeScreenActivity" />
+        </activity>
+        <activity
+            android:name=".PersonalStatsActivity"
+            android:label="@string/alternate_title_activity_personal_stats"
+            android:parentActivityName=".HomeScreenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.azhen.bikingapp.HomeScreenActivity" />
+        </activity>
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/alternate_title_activity_history"
+            android:parentActivityName=".HomeScreenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.azhen.bikingapp.HomeScreenActivity" />
+        </activity>
+        <activity
+            android:name=".SingleHistoryActivity"
+            android:label="@string/title_activity_single_history" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.azhen.bikingapp.HistoryActivity" />
+        </activity>
+    </application>
+
+</manifest>

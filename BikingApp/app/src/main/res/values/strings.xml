@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Biking App</string>
+
+    // Additional Activities
+    <string name="title_activity_bike_tracker">BikeTrackerActivity</string>
+    <string name="title_activity_personal_stats">PersonalStatsActivity</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="alternate_title_activity_bike_tracker">Bike Tracker</string>
+    <string name="alternate_title_activity_personal_stats">Personal Stats</string>
+    <string name="alternate_title_activity_history">History</string>
+
+
+    <string name="action_settings">Settings</string>
+
+    // Home Screen Buttons
+    <string name="BikeTrackerButtonText">Bike Tracker</string>
+    <string name="PersonalStatsButtonText">Personal Stats</string>
+    <string name="HistoryButtonText">History</string>
+
+
+    // Personal Stats TextViews
+    <string name="HeightText">Height (in)</string>
+    <string name="WeightText">Weight (lbs)</string>
+    <string name="AgeText">Age</string>
+    <string name="GenderText">Gender</string>
+    <string name="MaleText">Male</string>
+    <string name="FemaleText">Female</string>
+
+    // Personal Stats EditViews
+    <string name="HeightEText">0</string>
+    <string name="WeightEText">0</string>
+    <string name="AgeEText">0</string>
+    <string name="title_activity_single_history">SingleHistoryActivity</string>
+
+    // Bike Tracker TextViews
+    <string name="averageSpeedText">Average Speed</string>
+    <string name="averageInclineText">Average Incline</string>
+    <string name="elapsedTimeText">Elapsed Time</string>
+
+    // Bike Tracker Buttons
+    <string name="startClock">Start</string>
+    <string name="pauseClock">Pause</string>
+    <string name="stopClock">Stop</string>
+
+   // Single History
+    <string name="singleHistoryTitle">Single History</string>
+    <string name="dateTimeTitle">Date and Time</string>
+    <string name="averageSpeedTitle">Average Speed</string>
+    <string name="averageInclineTitle">Average Incline</string>
+    <string name="howIFeltTitle">How I Felt?</string>
+    <string name="deleteBikeHistoryText">Delete Ride</string>
+
+
+
+</resources>

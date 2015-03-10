@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HomeScreenActivity"
+    android:background="#ffcbcbcb">
+
+
+    <Button
+        android:text="@string/BikeTrackerButtonText"
+        android:id="@+id/BikeTrackerButton"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="gotoBikeTracker"
+        android:background="#ff02faff"/>
+
+    <Button
+    android:text="@string/PersonalStatsButtonText"
+    android:id="@+id/PersonalStatsButton"
+    android:layout_width="150dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="50dp"
+    android:gravity="center"
+    android:layout_below="@+id/BikeTrackerButton"
+    android:layout_centerHorizontal="true"
+    android:onClick="gotoPersonalStats"
+    android:background="#52fd2b"/>
+
+    <Button
+        android:text="@string/HistoryButtonText"
+        android:id="@+id/HistoryButton"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_below="@+id/PersonalStatsButton"
+        android:layout_centerHorizontal="true"
+        android:onClick="gotoHistory"
+        android:background="#fffdb73d"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+</RelativeLayout>

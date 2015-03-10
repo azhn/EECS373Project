@@ -1,0 +1,101 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.azhen.bikingapp.SingleHistoryActivity">
+
+    <TextView
+        android:id="@+id/dateTimeTitle"
+        android:text="@string/dateTimeTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/dateTimeTextView"
+        android:text="textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateTimeTitle"
+        android:layout_alignStart="@+id/dateTimeTitle" />
+
+
+    <TextView
+        android:id="@+id/averageSpeedTitle"
+        android:text="@string/averageSpeedTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateTimeTextView"
+        android:layout_alignStart="@+id/dateTimeTextView"
+        android:layout_marginTop="31dp" />
+    <TextView
+        android:id="@+id/averageSpeedTextView"
+        android:text="textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/averageSpeedTitle"
+        android:layout_alignStart="@+id/averageSpeedTitle" />
+
+
+    <TextView
+        android:id="@+id/averageInclineTitle"
+        android:text="@string/averageInclineTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/averageSpeedTextView"
+        android:layout_alignStart="@+id/averageSpeedTextView"
+        android:layout_marginTop="30dp" />
+    <TextView
+        android:id="@+id/averageInclineTextView"
+        android:text="textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/averageInclineTitle"
+        android:layout_alignStart="@+id/averageInclineTitle" />
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/rideFeelingTitle"
+            android:text="@string/howIFeltTitle"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <ImageView
+            android:id="@+id/rideFeelingImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+        <Button
+            android:id="@+id/deleteBikeHistoryButton"
+            android:text="@string/deleteBikeHistoryText"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="deleteBikeHistory" />
+    </TableRow>
+
+
+
+
+</TableLayout>
