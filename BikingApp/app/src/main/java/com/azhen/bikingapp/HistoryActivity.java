@@ -68,11 +68,12 @@ public class HistoryActivity extends ActionBarActivity {
         super.onResume();
 
         ArrayList<HashMap<String, String>> bikeHistoryList = dbTools.getAllBikeHistory();
+        ListView bikeHistoryListView = (ListView) findViewById(R.id.listFor);
 
         if (bikeHistoryList.size() != 0) {
             Log.d("MY_TAG", "onCreate() for HistoryActivity with arraylist size > 0");
             //ListView bikeHistoryListView = getListView();
-            ListView bikeHistoryListView = (ListView) findViewById(R.id.listFor);
+            //ListView bikeHistoryListView = (ListView) findViewById(R.id.listFor);
             bikeHistoryListView.setOnItemClickListener( new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -96,6 +97,7 @@ public class HistoryActivity extends ActionBarActivity {
             bikeHistoryListView.setAdapter(adapter);
             //setListAdapter(adapter);
         } else {
+            bikeHistoryListView.setAdapter(null);
             Log.d("MY_TAG", "onCreate() for HistoryActivity with arraylist size == 0");
         }
     }
