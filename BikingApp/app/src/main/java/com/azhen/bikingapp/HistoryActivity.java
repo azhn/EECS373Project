@@ -91,8 +91,8 @@ public class HistoryActivity extends ActionBarActivity {
 
             ListAdapter adapter = new SimpleAdapter(
                     HistoryActivity.this, bikeHistoryList, R.layout.bike_tracker_entry,
-                    new String[] {"bikeTrackId", "dateTime", "averageSpeed", "rideFeeling"},
-                    new int[] {R.id.bikeTrackId, R.id.dateTimeTextView, R.id.averageSpeedTextView, R.id.rideFeelingTextView});
+                    new String[] {"bikeTrackId", "dateDate", "averageSpeed", "rideFeeling"},
+                    new int[] {R.id.bikeTrackId, R.id.dateDateTextView, R.id.averageSpeedTextView, R.id.rideFeelingTextView});
             bikeHistoryListView.setAdapter(adapter);
             //setListAdapter(adapter);
         } else {

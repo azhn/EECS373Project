@@ -19,6 +19,8 @@ public class BikeTrackerActivity extends ActionBarActivity {
 
     EditText averageSpeed;
     EditText averageIncline;
+    EditText dateDate;
+    EditText dateTime;
     Button updateStuff;
 
     DBTools dbTools = new DBTools(this);
@@ -28,8 +30,16 @@ public class BikeTrackerActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bike_tracker);
 
+        final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        final SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+
+
         averageSpeed = (EditText) findViewById(R.id.averageSpeedEditText);
         averageIncline = (EditText) findViewById(R.id.averageInclineEditText);
+        dateDate = (EditText) findViewById(R.id.dateDateEditText);
+        dateTime = (EditText) findViewById(R.id.dateTimeEditText);
+
+        dateDate.setText(dateFormat.format(new Date()));
 
         updateStuff = (Button) findViewById(R.id.updateButton);
         updateStuff.setOnClickListener(new View.OnClickListener() {
@@ -38,11 +48,9 @@ public class BikeTrackerActivity extends ActionBarActivity {
 
                 HashMap<String, String> tempMap = new HashMap<String, String>();
 
-                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
-
                 //tempMap.put("dateTime", getDateCurrentTimeZone(System.currentTimeMillis()*));
-                tempMap.put("dateTime", dateFormat.format(new Date()));
+                tempMap.put("dateDate", dateFormat.format(new Date()));
+                tempMap.put("dateTime", timeFormat.format(new Date()));
                 tempMap.put("averageSpeed", averageSpeed.getText().toString());
                 tempMap.put("averageIncline", averageIncline.getText().toString());
                 tempMap.put("rideFeeling", "2");
@@ -52,6 +60,7 @@ public class BikeTrackerActivity extends ActionBarActivity {
 
             }
         });
+
 
     }
 

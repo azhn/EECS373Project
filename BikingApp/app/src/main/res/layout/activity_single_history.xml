@@ -9,11 +9,28 @@
     tools:context="com.azhen.bikingapp.SingleHistoryActivity">
 
     <TextView
-        android:id="@+id/dateTimeTitle"
-        android:text="@string/dateTimeTitle"
+        android:id="@+id/dateDateTitle"
+        android:text="@string/dateDateText"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/dateDateTextView"
+        android:text="textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateDateTitle"
+        android:layout_alignStart="@+id/dateDateTitle" />
+
+    <TextView
+        android:id="@+id/dateTimeTitle"
+        android:text="@string/elapsedTimeText"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateDateTextView"
+        android:layout_alignStart="@+id/dateDateTextView"
+        android:layout_marginTop="31dp" />
     <TextView
         android:id="@+id/dateTimeTextView"
         android:text="textView1"

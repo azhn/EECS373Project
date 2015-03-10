@@ -35,6 +35,7 @@
     // Bike Tracker TextViews
     <string name="averageSpeedText">Average Speed</string>
     <string name="averageInclineText">Average Incline</string>
+    <string name="dateDateText">Date</string>
     <string name="elapsedTimeText">Elapsed Time</string>
 
     // Bike Tracker Buttons

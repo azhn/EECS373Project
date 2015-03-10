@@ -15,6 +15,7 @@ import java.util.HashMap;
 
 public class SingleHistoryActivity extends ActionBarActivity {
 
+    TextView dateDateTextView;
     TextView dateTimeTextView;
     TextView averageSpeedTextView;
     TextView averageInclineTextView;
@@ -27,6 +28,7 @@ public class SingleHistoryActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_history);
 
+        dateDateTextView = (TextView) findViewById(R.id.dateDateTextView);
         dateTimeTextView = (TextView) findViewById(R.id.dateTimeTextView);
         averageSpeedTextView = (TextView) findViewById(R.id.averageSpeedTextView);
         averageInclineTextView = (TextView) findViewById(R.id.averageInclineTextView);
@@ -39,9 +41,11 @@ public class SingleHistoryActivity extends ActionBarActivity {
         HashMap<String, String> bikeHistoryMap = dbTools.getBikeHistory(bikeTrackId);
 
         if (bikeHistoryMap.size() != 0) {
+            dateDateTextView.setText(bikeHistoryMap.get("dateDate"));
             dateTimeTextView.setText(bikeHistoryMap.get("dateTime"));
             averageSpeedTextView.setText(bikeHistoryMap.get("averageSpeed"));
             averageInclineTextView.setText(bikeHistoryMap.get("averageIncline"));
+
             switch (bikeHistoryMap.get("rideFeeling")) {
                 case "0": rideFeelingImageView.setImageDrawable(getResources().getDrawable(R.drawable.emoticon_0));
                 break;

@@ -18,8 +18,8 @@ public class DBTools extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase database) {
-        String query = "CREATE TABLE bikehistory ( bikeTrackId INTEGER PRIMARY KEY, dateTime TEXT, " +
-                " averageSpeed TEXT, averageIncline TEXT, rideFeeling TEXT)";
+        String query = "CREATE TABLE bikehistory ( bikeTrackId INTEGER PRIMARY KEY, dateDate TEXT, " +
+                " dateTime TEXT, averageSpeed TEXT, averageIncline TEXT, rideFeeling TEXT)";
 
         database.execSQL(query);
     }
@@ -37,6 +37,7 @@ public class DBTools extends SQLiteOpenHelper {
 
         ContentValues values = new ContentValues();
 
+        values.put("dateDate", queryValues.get("dateDate"));
         values.put("dateTime", queryValues.get("dateTime"));
         values.put("averageSpeed", queryValues.get("averageSpeed"));
         values.put("averageIncline", queryValues.get("averageIncline"));
@@ -53,6 +54,7 @@ public class DBTools extends SQLiteOpenHelper {
 
         ContentValues values = new ContentValues();
 
+        values.put("dateDate", queryValues.get("dateDate"));
         values.put("dateTime", queryValues.get("dateTime"));
         values.put("averageSpeed", queryValues.get("averageSpeed"));
         values.put("averageIncline", queryValues.get("averageIncline"));
@@ -72,7 +74,7 @@ public class DBTools extends SQLiteOpenHelper {
     public ArrayList<HashMap<String, String>> getAllBikeHistory() {
         ArrayList<HashMap<String, String>> bikeHistoryArrayList = new ArrayList<HashMap<String, String>>();
 
-        String selectQuery = "SELECT * FROM bikehistory ORDER BY dateTime(dateTime) DESC";
+        String selectQuery = "SELECT * FROM bikehistory ORDER BY date(dateDate) DESC, time(dateTime) DESC";
 
         SQLiteDatabase database = this.getWritableDatabase();
 
@@ -83,10 +85,11 @@ public class DBTools extends SQLiteOpenHelper {
                 HashMap<String, String> bikehistoryMap = new HashMap<String, String>();
 
                 bikehistoryMap.put("bikeTrackId", cursor.getString(0));
-                bikehistoryMap.put("dateTime", cursor.getString(1));
-                bikehistoryMap.put("averageSpeed", cursor.getString(2));
-                bikehistoryMap.put("averageIncline", cursor.getString(3));
-                bikehistoryMap.put("rideFeeling", cursor.getString(4));
+                bikehistoryMap.put("dateDate", cursor.getString(1));
+                bikehistoryMap.put("dateTime", cursor.getString(2));
+                bikehistoryMap.put("averageSpeed", cursor.getString(3));
+                bikehistoryMap.put("averageIncline", cursor.getString(4));
+                bikehistoryMap.put("rideFeeling", cursor.getString(5));
 
                 bikeHistoryArrayList.add(bikehistoryMap);
             } while (cursor.moveToNext());
@@ -109,10 +112,11 @@ public class DBTools extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 bikehistoryMap.put("bikeTrackId", cursor.getString(0));
-                bikehistoryMap.put("dateTime", cursor.getString(1));
-                bikehistoryMap.put("averageSpeed", cursor.getString(2));
-                bikehistoryMap.put("averageIncline", cursor.getString(3));
-                bikehistoryMap.put("rideFeeling", cursor.getString(4));
+                bikehistoryMap.put("dateDate", cursor.getString(1));
+                bikehistoryMap.put("dateTime", cursor.getString(2));
+                bikehistoryMap.put("averageSpeed", cursor.getString(3));
+                bikehistoryMap.put("averageIncline", cursor.getString(4));
+                bikehistoryMap.put("rideFeeling", cursor.getString(5));
             } while (cursor.moveToNext());
         }
 
